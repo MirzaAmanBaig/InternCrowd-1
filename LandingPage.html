@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="LandingPage.css">
+  
+  <title>Intern Crowd task 1</title>
+</head>
+<body>
+   <section class="header">
+
+   
+  <nav>
+     <div class="menu-icon">
+        <span class="fa fa-bars"></span>
+     </div>
+     <div class="logo">
+      <span class="fa fa-search"></span>
+        Intern Crowd
+     </div>
+     <div class="nav-items">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">About us</a></li>
+
+     </div>
+     <div class="search-icon">
+        <span class="fa fa-search"></span>
+     </div>
+     <div class="cancel-icon">
+        <span class="fa fa-times"></span>
+     </div>
+     <form action="#">
+        <input type="search" class="search-data" placeholder="Search" required>
+        <button type="submit" class="fa fa-search"></button>
+     </form>
+
+  </nav>
+  <div class="head-box">
+   <h1>Welcome to Intern Crowd </h1>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Voluptatem, quo debitis. Quam molestias,<br>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+</div>       
+</section>
+
+<!--------Course-------->
+<section class="Intern">
+   <h1>We Offer Internships on</h1>
+   <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</p>
+
+   <div class="row">
+
+    <div class="Intern-col">
+        <h3>Web Development</h3>
+        <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit.Pellentesque aliquet turpis nulla, eleifend faucibus est sollicitudin ut. Maecenas ut venenatics ex, et dapibus purus Donec sit.</p>
+    </div>
+
+ <div class="Intern-col">
+    <h3>Android Development</h3>
+    <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit.Pellentesque aliquet turpis nulla, eleifend faucibus est sollicitudin ut. Maecenas ut venenatics ex, et dapibus purus Donec sit.</p>
+ </div>
+
+ <div class="Intern-col">
+    <h3>Java Davelopment</h3>
+    <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit.Pellentesque aliquet turpis nulla, eleifend faucibus est sollicitudin ut. Maecenas ut venenatics ex, et dapibus purus Donec sit.</p>
+   </div>
+</div>
+
+
+
+</section>
+
+
+
+ 
+
+  <script>
+     const menuBtn = document.querySelector(".menu-icon span");
+     const searchBtn = document.querySelector(".search-icon");
+     const cancelBtn = document.querySelector(".cancel-icon");
+     const items = document.querySelector(".nav-items");
+     const form = document.querySelector("form");
+     menuBtn.onclick = ()=>{
+       items.classList.add("active");
+       menuBtn.classList.add("hide");
+       searchBtn.classList.add("hide");
+       cancelBtn.classList.add("show");
+     }
+     cancelBtn.onclick = ()=>{
+       items.classList.remove("active");
+       menuBtn.classList.remove("hide");
+       searchBtn.classList.remove("hide");
+       cancelBtn.classList.remove("show");
+       form.classList.remove("active");
+       cancelBtn.style.color = "#ff3d00";
+     }
+     searchBtn.onclick = ()=>{
+       form.classList.add("active");
+       searchBtn.classList.add("hide");
+       cancelBtn.classList.add("show");
+     }
+  </script>
+</body>
+</html>
